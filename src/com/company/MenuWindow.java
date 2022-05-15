@@ -2,11 +2,11 @@ package com.company;
 
 import javax.swing.*;
 
-public class MainWindow extends JFrame {
-  public MainWindow(int weight, int height, Team team) {
+public class MenuWindow extends JFrame {
+  public MenuWindow(int weight, int height) {
     setSize(weight, height);
     setLocationRelativeTo(null);
-    add(new GameField(team));
+    add(new Menu(this));
     setVisible(true);
   }
 }
