@@ -78,34 +78,34 @@ public class Menu extends JPanel {
         switch (playerNumber) {
           case 1:
             team = new Team(
-                new Warrior("Aragorn", 0, 0, KeyEvent.VK_A, KeyEvent.VK_D, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_Q,
+                new Warrior("Filip", 0, 0, KeyEvent.VK_A, KeyEvent.VK_D, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_Q,
                     KeyEvent.VK_E, 0));
             break;
           case 2:
             team = new Team(
-                new Warrior("Aragorn", 0, 0, KeyEvent.VK_A, KeyEvent.VK_D, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_Q,
+                new Warrior("Andrew", 0, 0, KeyEvent.VK_A, KeyEvent.VK_D, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_Q,
                     KeyEvent.VK_E, 0),
-                new Mage("Gendolf", 0, 320, KeyEvent.VK_H, KeyEvent.VK_K, KeyEvent.VK_U, KeyEvent.VK_J, KeyEvent.VK_Y,
+                new Mage("Salazar", 0, 320, KeyEvent.VK_H, KeyEvent.VK_K, KeyEvent.VK_U, KeyEvent.VK_J, KeyEvent.VK_Y,
                     KeyEvent.VK_I, 0));
             break;
           case 3:
             team = new Team(
-                new Warrior("Aragorn", 0, 0, KeyEvent.VK_A, KeyEvent.VK_D, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_Q,
+                new Warrior("John", 0, 0, KeyEvent.VK_A, KeyEvent.VK_D, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_Q,
                     KeyEvent.VK_E, 0),
-                new Mage("Gendolf", 0, 320, KeyEvent.VK_H, KeyEvent.VK_K, KeyEvent.VK_U, KeyEvent.VK_J, KeyEvent.VK_Y,
+                new Mage("Steve", 0, 320, KeyEvent.VK_H, KeyEvent.VK_K, KeyEvent.VK_U, KeyEvent.VK_J, KeyEvent.VK_Y,
                     KeyEvent.VK_I, 0),
-                new Archer("Legolas", 320, 0, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, KeyEvent.VK_UP, KeyEvent.VK_DOWN,
+                new Archer("Anatol", 320, 0, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, KeyEvent.VK_UP, KeyEvent.VK_DOWN,
                     KeyEvent.VK_DELETE, KeyEvent.VK_PAGE_DOWN, 0));
             break;
           case 4:
             team = new Team(
-                new Warrior("Aragorn", 0, 0, KeyEvent.VK_A, KeyEvent.VK_D, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_Q,
+                new Warrior("Smerth", 0, 0, KeyEvent.VK_A, KeyEvent.VK_D, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_Q,
                     KeyEvent.VK_E, 0),
-                new Mage("Gendolf", 0, 320, KeyEvent.VK_H, KeyEvent.VK_K, KeyEvent.VK_U, KeyEvent.VK_J, KeyEvent.VK_Y,
+                new Mage("Sewerus", 0, 320, KeyEvent.VK_H, KeyEvent.VK_K, KeyEvent.VK_U, KeyEvent.VK_J, KeyEvent.VK_Y,
                     KeyEvent.VK_I, 0),
-                new Archer("Legolas", 320, 0, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, KeyEvent.VK_UP, KeyEvent.VK_DOWN,
+                new Archer("Robin", 320, 0, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, KeyEvent.VK_UP, KeyEvent.VK_DOWN,
                     KeyEvent.VK_DELETE, KeyEvent.VK_PAGE_DOWN, 0),
-                new Healer("Radagast", 320, 320, KeyEvent.VK_NUMPAD1, KeyEvent.VK_NUMPAD3, KeyEvent.VK_NUMPAD5,
+                new Healer("Magnat Magnum", 320, 320, KeyEvent.VK_NUMPAD1, KeyEvent.VK_NUMPAD3, KeyEvent.VK_NUMPAD5,
                     KeyEvent.VK_NUMPAD2, KeyEvent.VK_NUMPAD4, KeyEvent.VK_NUMPAD6, KeyEvent.VK_NUMPAD9));
             break;
         }

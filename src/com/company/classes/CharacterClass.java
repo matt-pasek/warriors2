@@ -19,6 +19,7 @@ public abstract class CharacterClass implements BaseClass {
   private int leftKey, rightKey, upKey, downKey, leftAttackKey, rightAttackKey, abilityKey;
   protected String className;
   private int minRange, maxRange;
+  private int monstersKilled;
 
   public CharacterClass(
       String name, int x, int y, int leftKey, int rightKey, int upKey, int downKey, int leftAttackKey,
@@ -145,15 +146,34 @@ public abstract class CharacterClass implements BaseClass {
       if (this.manaPoints >= this.attackAmount) {
         attackedPlayer.loseHealth(this.attackAmount);
         loseMana(this.attackAmount);
+        System.out.println(this.className + " attacked " + attackedPlayer.className + " for " + this.attackAmount);
       } else {
         System.out.println("Not enough mana");
       }
-      System.out.println(this.className + " attacked " + attackedPlayer.className + " for " + this.attackAmount);
+
     } else {
       attackedPlayer.loseHealth(this.attackAmount);
       System.out.println(this.className + " attacked " + attackedPlayer.className + " for " + this.attackAmount);
     }
 
+  }
+
+  public void attack(MonsterClass attackedMonster) {
+    if (this.attackType == AttackType.HEALING) {
+      System.out.println("Healer can't attack monsters");
+    }
+    if (this.attackType == AttackType.MAGICAL || this.attackType == AttackType.MAGICAL_RANGED) {
+      if (this.manaPoints >= this.attackAmount) {
+        attackedMonster.reduceHealth(this.attackAmount, this);
+        loseMana(this.attackAmount);
+        System.out.println(this.className + " attacked monster for " + this.attackAmount);
+      } else {
+        System.out.println("Not enough mana");
+      }
+    } else {
+      attackedMonster.reduceHealth(this.attackAmount, this);
+      System.out.println(this.className + " attacked monster for " + this.attackAmount);
+    }
   }
 
   @Override
@@ -319,4 +339,11 @@ public abstract class CharacterClass implements BaseClass {
     } while (again);
   }
 
+  public void setMonstersKilled(int monstersKilled) {
+    this.monstersKilled = monstersKilled;
+  }
+
+  public int getMonstersKilled() {
+    return monstersKilled;
+  }
 }
