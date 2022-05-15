@@ -8,6 +8,6 @@ public class Syberia extends ArenaBase {
   public Syberia() {
     int[][] blocks = { { 2 * 40, 1 * 80 }, { 6 * 40, 1 * 80 }, { 2 * 40, 3 * 80 }, { 6 * 40, 3 * 80 } };
     this.wallLocation = blocks;
-    this.baseImage = new ImageIcon("images/iceBlock.jpg").getImage();
+    this.baseImage = new ImageIcon("images/iceBlock.png").getImage();
   }
 }
